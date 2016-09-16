@@ -18,6 +18,7 @@ class collectd::params {
         $write_http_timeout        = 3000
         $write_http_buffersize     = 65536
         $aws_integration           = true
+        $disable_notify_in_puppet  = false
         $write_http_log_http_error = true
         $write_http_flush_interval = 10
 
@@ -29,6 +30,7 @@ class collectd::params {
         $signalfx_plugin_utilization              = true
         $signalfx_plugin_cpu_utilization          = true
         $signalfx_plugin_cpu_utilization_per_core = true
+        $skip_package_management                  = false
         $filter_default_metrics                   = false
         $filter_default_metric_rules              = {}
 

@@ -6,6 +6,7 @@ class collectd (
     $signalfx_api_token,
     $ensure_signalfx_collectd_version         = present,
     $signalfx_collectd_repo_source            = $collectd::params::signalfx_collectd_repo_source,
+    $skip_package_management                  = $collectd::params::skip_package_management,
     # collectd.conf parameters
     $fqdnlookup                               = $collectd::params::fqdnlookup,
     $hostname                                 = $collectd::params::hostname,
@@ -21,6 +22,7 @@ class collectd (
     # write_http parameters
     $dimension_list                           = $collectd::params::dimension_list,
     $aws_integration                          = $collectd::params::aws_integration,
+    $disable_notify_in_puppet                 = $collectd::params::disable_notify_in_puppet,
     $signalfx_api_endpoint                    = $collectd::params::signalfx_api_endpoint,
     $write_http_timeout                       = $collectd::params::write_http_timeout,
     $write_http_buffersize                    = $collectd::params::write_http_buffersize,
